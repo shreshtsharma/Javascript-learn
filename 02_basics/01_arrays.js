@@ -6,7 +6,7 @@ let myarr=["shresht",1,2,"sharma"]
 const nums=new Array(1,2,3,6)
 // console.log(arr[0]);
 // console.log(myarr[3])
-// console.log(typeof nums)
+console.log(typeof nums)
 nums.push(4);
 nums.push(10)
 nums[2]=6

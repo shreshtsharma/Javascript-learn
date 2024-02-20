@@ -15,7 +15,7 @@ console.log(game2);
 console.log(game.charAt('3'));
 console.log(game.indexOf('k'));
 
-
+let gameName="football"
 
 const newString = gameName.substring(0, 4)
 console.log(newString);

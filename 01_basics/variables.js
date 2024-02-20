@@ -10,7 +10,7 @@ let accountHolder;  // we haven't assigned a value to it so it has the value und
 
 /*
 Prefer not to use var
-because of issue in block scope and functdaional scope
+because of issue in block scope and functional scope
 var does not support scope instead use let
 */
 
