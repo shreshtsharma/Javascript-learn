@@ -115,3 +115,57 @@ restart.addEventListener('click', function (e) {
   location.reload();
 });
 ```
+
+## Project 5 [KeyBoard]
+
+```javascript
+const insert = document.getElementById("insert");
+
+window.addEventListener("keydown", (e) => {
+  insert.innerHTML = `<div class="color">
+  <table>
+  <tr>
+    <th>key</th>
+    <th>keycode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key === " " ? "space" : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>
+</div>`;
+});
+
+console.log(insert.innerHTML);
+```
+
+## project 6 [background color changer]
+
+```javascript
+function randomclr() {
+  const hex = "0123456789ABCDEF";
+  let clr = "#";
+  for (let i = 0; i < 6; i++) {
+    clr += hex[Math.floor(Math.random() * 16)];
+  }
+  return clr;
+}
+const start = document.querySelector("#start");
+const stop = document.querySelector("#stop");
+
+let intervalId = null;
+start.addEventListener("click", function () {
+  if (!intervalId) {
+    intervalId = setInterval(function () {
+      document.body.style.backgroundColor = randomclr();
+    }, 1000);
+  }
+});
+
+stop.addEventListener("click", function () {
+  clearInterval(intervalId);
+  intervalId = null;
+});
+```
