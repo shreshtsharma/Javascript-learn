@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Asynchronous Javascript</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    setTimeout(function () {
+      console.log("shresht");
+    }, 2000);
+
+    const sayName = function () {
+      console.log("sharma");
+    };
+    // we can also give a reference of a function to setTimeout
+    setTimeout(sayName, 2000);
+
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "best JS series";
+    };
+
+    const changeMe = setTimeout(changeText, 3000);
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      // stopping changing text by clearing set Time out
+      clearTimeout(changeMe);
+      console.log("stopped");
+    });
+    // setInterval(() => {
+    //   console.log("sharma");
+    // }, 3000);
+  </script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #313131; color: antiquewhite">
+    <h1>Clock App</h1>
+    <p id="clock"></p>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const t = document.querySelector("#clock");
+    let st = null;
+    function startTime() {
+      st = setInterval(function () {
+        const date = new Date();
+        t.innerHTML = date.toLocaleTimeString();
+      }, 1000);
+    }
+    function stopTime() {
+      clearInterval(st);
+    }
+
+    document.querySelector("#start").addEventListener("click", startTime);
+
+    document.querySelector("#stop").addEventListener("click", stopTime);
+  </script>
+</html>
