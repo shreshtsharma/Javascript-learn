@@ -116,3 +116,19 @@ fetch("https://api.github.com/users/shreshtsharma")
     console.log(data)
 })
 .catch((error)=>console.log("error"))
+
+// A fetch() promise will reject with a TypeError when a 
+// network error is encountered or CORS is misconfigured on the
+// server-side, although this usually means permission issues or 
+// similar — a 404 does not constitute a network error, for 
+// example. An accurate check for a successful fetch() would 
+// include checking that the promise resolved, then checking that
+// the Response.ok property has a value of true.
+
+
+
+// A fetch() promise only rejects when a network error is 
+// encountered (which is usually when there's a permissions issue
+// or similar). A fetch() promise does not reject on HTTP errors 
+// (404, etc.). Instead, a then() handler must check the Response.
+// ok and/or Response.status properties.
