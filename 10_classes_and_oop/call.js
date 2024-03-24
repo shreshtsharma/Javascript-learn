@@ -42,5 +42,5 @@ var person = {
 //   
   
   // Using .call() to invoke fullName with different objects
-  console.log(person.fullName(person1)); // Outputs: John Doe
+  console.log(person.fullName(person1));
   console.log(person.fullName.call(person2)); // Outputs: Jane Doe
