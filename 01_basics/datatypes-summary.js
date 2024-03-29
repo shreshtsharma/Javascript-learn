@@ -30,7 +30,7 @@ const id=Symbol('123')
 const id2=Symbol('123')
 // they seem to be same but symbol makes them unique
 console.log(id===id2)
-
+// output : false
 
 // Array
 const heros=['shaktimaan','spidey','batman'];
